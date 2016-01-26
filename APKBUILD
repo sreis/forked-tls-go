@@ -2,7 +2,7 @@
 pkgname=forked-tls-go
 pkgver=1.5.3
 pkgrel=0
-pkgdesc="Go programming language compiler"
+pkgdesc="Forked version of Go programming language compiler with TLS patch."
 url="http://www.golang.org/"
 arch="x86 x86_64 armhf"
 license="BSD"
@@ -21,16 +21,6 @@ source="
 _builddir="$srcdir"/go-go1.5-SNAPSHOT
 _toolrepo=golang.org/x/tools
 _tooltag=release-branch.go1.4
-
-prepare() {
-	local i
-	cd "$_builddir"
-	for i in $source; do
-		case $i in
-		*.patch) msg $i; patch -p1 -i "$srcdir"/$i || return 1;;
-		esac
-	done
-}
 
 build() {
 	export GOPATH="$srcdir"
@@ -85,8 +75,8 @@ package() {
 	# When this is resolved we can split out the source to a
 	# go-doc sub package.
 	install -dm755 "$pkgdir"/usr/lib/go/src
-	for d in pkg cmd; do
-		cp -a src/$d "$pkgdir"/usr/lib/go/src
+	for d in $(find src/ -type d -print); do
+		cp -a $d "$pkgdir"/usr/lib/go/src
 	done
 }
 
