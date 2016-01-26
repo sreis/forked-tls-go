@@ -25,3 +25,7 @@ abuild -r
 ```
 
 This will create a `~/packages` with the apk package.
+
+#### Deploy
+
+Copy `~/packages` to the S3 bucket `apk.littlebitscloud.cc`.
