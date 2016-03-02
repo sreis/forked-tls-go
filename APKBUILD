@@ -1,6 +1,6 @@
 # Maintainer: Simao Reis <smnrsti@gmail.com>
 pkgname=forked-tls-go
-pkgver=1.5.3
+pkgver=1.6.0
 pkgrel=0
 pkgdesc="Forked version of Go programming language compiler with TLS patch."
 url="http://www.golang.org/"
@@ -15,10 +15,10 @@ subpackages="
 	$pkgname-tools:tools
 	"
 source="
-	https://github.com/sreis/go/archive/go1.5-SNAPSHOT.tar.gz
+	https://github.com/sreis/go/archive/go1.6-SNAPSHOT.tar.gz
 	"
 
-_builddir="$srcdir"/go-go1.5-SNAPSHOT
+_builddir="$srcdir"/go-go1.6-SNAPSHOT
 _toolrepo=golang.org/x/tools
 _tooltag=release-branch.go1.4
 
@@ -104,6 +104,6 @@ tools() {
 	done
 }
 
-md5sums="ef8aa8a7c357fdd9dde4b0ba14bb93ba  go1.5-SNAPSHOT.tar.gz"
-sha256sums="b281f54575ef34039ea955ff502e9f7ac84bc8e02e02d6bc9267a01a067d5f81  go1.5-SNAPSHOT.tar.gz"
-sha512sums="2228f13eceb71bb9bcffa46ea23e0db20499e83bb170890c1d1e68e18d53a31e5619919d2928bebc8eb0dcfae2f214978be1caa0f97d059504b17ea2301ce5ef  go1.5-SNAPSHOT.tar.gz"
+md5sums="10d6902f4392baa85dd4889044bdd37c  go1.6-SNAPSHOT.tar.gz"
+sha256sums="32ef677ba2e429a5c6fc5795ff650454429a9bcc8f2866f1637d8b9f441b97d1  go1.6-SNAPSHOT.tar.gz"
+sha512sums="6a2b62f82636df56d37bb8756ec09ee3cbc047a1ad5d32241422cf6d00777d227258c29b3f013f679f5872a219cad9458ee2438bba31bf514b632c157a67147b  go1.6-SNAPSHOT.tar.gz"
