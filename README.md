@@ -7,6 +7,7 @@ More info here:
 - http://wiki.alpinelinux.org/wiki/Installation
 - http://wiki.alpinelinux.org/wiki/Install_Alpine_on_VirtualBox
 - http://wiki.alpinelinux.org/wiki/Creating_an_Alpine_package
+- http://git.alpinelinux.org/cgit/aports/tree/community/go
 
 #### Install Alpine in a VirtualBox VM
 #### Create user and configure sudo
